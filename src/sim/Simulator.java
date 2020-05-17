@@ -6,11 +6,12 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Simulator {
 
 	// TODO change to threadlocalrandom
-	private static Random RANDOM = new Random();
+//	private static Random RANDOM = new Random();
 	
 	private static int generate(int maxInclusive) {
+		return ThreadLocalRandom.current().nextInt(maxInclusive + 1);
 //		return RANDOM.nextInt()%(maxInclusive + 1);
-		return RANDOM.nextInt(maxInclusive + 1);
+//		return RANDOM.nextInt(maxInclusive + 1);
 	}
 
 	private static double deg2Rad(double deg) {
